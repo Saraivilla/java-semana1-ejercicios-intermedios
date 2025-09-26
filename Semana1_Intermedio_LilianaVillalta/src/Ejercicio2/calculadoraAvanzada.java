@@ -37,6 +37,7 @@ public class calculadoraAvanzada {
             System.out.print("Seleccione una opción: ");
             opcion = entrada.nextInt();
 
+            //Solicita los dos números para los siguientes casos
             switch (opcion) {
                 case 1:
                 case 2:
@@ -66,6 +67,7 @@ public class calculadoraAvanzada {
                     System.out.printf("La multiplicación de %.2f x %.2f es: %.2f%n", num1, num2, resultado);
                     break;
                 case 4:
+                    //Validación de divisor 0
                     if (num2 != 0) {
                         resultado = num1 / num2;
                         System.out.printf("La división de %.2f / %.2f es: %.2f%n", num1, num2, resultado);
@@ -78,6 +80,7 @@ public class calculadoraAvanzada {
                     System.out.printf("%.2f elevado a %.2f es: %.2f%n", num1, num2, resultado);
                     break;
                 case 6:
+                    //Solicita solo un número
                     System.out.print("Ingresa el número: ");
                     num1 = entrada.nextDouble();
                     if (num1 >= 0) {

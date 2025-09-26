@@ -17,8 +17,10 @@ public class serieFibonacci {
     public static void main(String[] args) {
         // TODO code application logic here
 
+        //Inicialización de los primeros 2 valores
         int num1 = 0, num2 = 1, contador = 0, next;
 
+        //Contador 20 para evitar cálculo excesivo
         while (contador < 20) {
 
             System.out.print(num1 + "|" + num2 + "|");

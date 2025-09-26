@@ -38,6 +38,7 @@ public class factorial {
                     } else {
                         int factorial = 1;
 
+                        //Multiplicación desde 1 hasta num
                         for (int i = 1; i <= num; i++) {
                             factorial *= i;
                         }

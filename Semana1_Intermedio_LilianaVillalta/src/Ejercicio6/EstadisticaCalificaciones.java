@@ -21,7 +21,7 @@ public class EstadisticaCalificaciones {
 
         Scanner entrada = new Scanner(System.in);
 
-        double nota, sumNotas = 0, alta = 0, baja = 10;
+        double nota, sumNotas = 0, alta = 0, baja = 100;
         System.out.println("**Ingreso de calificaciones**\n");
 
         System.out.print("Ingrese la cantidad de estudiantes para ingresar notas: ");
@@ -30,16 +30,16 @@ public class EstadisticaCalificaciones {
         for (int i = 0; i < cant; i++) {
             System.out.print("Ingrese la calificación del estudiante " + (i + 1) + ": ");
             nota = entrada.nextDouble();
-            if (nota != -1) {
-                sumNotas += nota;
-                if (nota > alta) {
-                    alta = nota;
-                }
 
-                if (nota < baja) {
-                    baja = nota;
-                }
+            sumNotas += nota;
+            
+            //Caluclo de nota alta y nota baja
+            if (nota > alta) {
+                alta = nota;
+            }
 
+            if (nota < baja) {
+                baja = nota;
             }
         }
 

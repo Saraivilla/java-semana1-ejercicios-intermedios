@@ -6,7 +6,7 @@
 package Ejercicio8;
 
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.ArrayList; //Importamos ArrayList
 /**
  *
  * @author Sarai
@@ -21,9 +21,11 @@ public class inventario {
 
         Scanner entrada = new Scanner(System.in);
 
+        //ArrayList por atributo
         ArrayList<String> nombres = new ArrayList<>();
         ArrayList<Double> precios = new ArrayList<>();
         ArrayList<Integer> cantidades = new ArrayList<>();
+        
         int opcion;
         do {
 
@@ -51,12 +53,15 @@ public class inventario {
                     System.out.print("Cantidad: ");
                     int cantidad = entrada.nextInt();
 
+                    //Agregar información por cada arrayList
                     nombres.add(nombre);
                     precios.add(precio);
                     cantidades.add(cantidad);
+                    
                     System.out.println("Producto registrado!!\n");
                     break;
                 case 2:
+                    //Validación para ver si hay productos
                     if (nombres.isEmpty()) {
                         System.out.println("No hay productos registrados.\n");
                     } else {
@@ -68,6 +73,7 @@ public class inventario {
                     }
                     break;
                 case 3:
+                    //Obtener valor total de inventario
                     double total = 0;
                     for (int i = 0; i < nombres.size(); i++) {
                         total += precios.get(i) * cantidades.get(i);

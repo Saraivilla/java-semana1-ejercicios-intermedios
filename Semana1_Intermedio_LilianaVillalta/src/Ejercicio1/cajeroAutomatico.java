@@ -21,6 +21,7 @@ public class cajeroAutomatico {
 
         Scanner entrada = new Scanner(System.in);
 
+        //sado inicial
         double saldo = 500.00;
 
         int opcion;
@@ -42,23 +43,26 @@ public class cajeroAutomatico {
 
             switch (opcion) {
                 case 1:
+                    //Consulta de saldo
                     System.out.printf("Saldo actual: %.2f%n", saldo);
                     break;
                 case 2:
+                    //Deposito
                     System.out.print("Ingrese el monto a depositar: $");
                     double deposito = entrada.nextDouble();
 
                     if (deposito > 0) {
-                        saldo += deposito;
+                        saldo += deposito; 
                         System.out.printf("Deposito exitoso. Nuevo saldo: %.2f%n ", saldo);
                     } else {
                         System.out.println("Cantidad Inválida");
                     }
                     break;
                 case 3:
+                    //Retiro
                     System.out.print("Ingrese el monto a retirar: $");
                     double retiro = entrada.nextDouble();
-                    if (retiro > 0 && retiro <= saldo) {
+                    if (retiro > 0 && retiro <= saldo) { //El retiro debe ser menor al saldo actual
                         saldo -= retiro;
                         System.out.printf("Retiro exitoso. Nuevo saldo: %.2f%n ", saldo);
                     } else {

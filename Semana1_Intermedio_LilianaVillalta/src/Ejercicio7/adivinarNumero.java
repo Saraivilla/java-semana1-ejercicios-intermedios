@@ -5,7 +5,7 @@
  */
 package Ejercicio7;
 
-import java.util.Random;
+import java.util.Random; //Importamos Random
 import java.util.Scanner;
 
 /**
@@ -21,8 +21,11 @@ public class adivinarNumero {
         // TODO code application logic here
 
         Scanner entrada = new Scanner(System.in);
+
+        //Generamos el número
         Random random = new Random();
         int numRandom = random.nextInt(100) + 1;
+
         int intentos = 0;
         int num;
 
@@ -31,6 +34,7 @@ public class adivinarNumero {
             num = entrada.nextInt();
             intentos++;
 
+            //Verificamos si el número es mayor, menor o igual
             if (num < numRandom) {
                 System.out.println("Demasiado bajo");
             } else if (num > numRandom) {

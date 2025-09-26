@@ -23,6 +23,7 @@ public class numerosPrimos {
         System.out.print("Ingrese un número para verificar si es primo: ");
         int num = entrada.nextInt();
 
+        //Ni 1 ni números negativos pueden ser primos
         if (num < 2) {
             System.out.println("El número " + num + " no es primo.");
         } else {
